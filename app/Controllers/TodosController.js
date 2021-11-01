@@ -26,7 +26,7 @@ export class TodosController {
 
     async createTodo(id) {
         try {
-            //window.event.preventDefault()
+            window.event.preventDefault()
             //const formElem = window.event.target
             //debugger
             //await todosService.createTodo(todoData)

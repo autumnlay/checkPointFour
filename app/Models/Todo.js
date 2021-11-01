@@ -18,6 +18,7 @@ export class Todo {
           <div class="bg-primary">
             <div>
               <h1> Todos:</h1>
+              <div>Total Todos:</div>
               <div class="col-12">${this.showTodos()}
               </div>
 
@@ -29,7 +30,7 @@ export class Todo {
                       placeholder="New Todo">
                   </div>
 
-                  <button class="btn btn-warning"> add task</button>
+                  <button type="submit"class="btn btn-warning"> add task</button>
                 </div>
               </form>
             </div>

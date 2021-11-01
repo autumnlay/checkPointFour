@@ -32,6 +32,8 @@ class TodosService {
     async checkBox(id) {
         const found = ProxyState.todos.find(c => c.id == id)
         found.check = !found.check
+        const res = await sandBoxApi.put(found.id, found)
+
         ProxyState.todos = ProxyState.todos
     }
 }
