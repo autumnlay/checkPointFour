@@ -1,5 +1,14 @@
 import { ProxyState } from "../AppState.js";
 
+function updateTime(k) {
+    debugger
+    if (k < 10) {
+        return "0" + k;
+    }
+    else {
+        return k;
+    }
+}
 class ClockService {
     // constructor() {
     //     ProxyState.on('clock')
@@ -8,14 +17,15 @@ class ClockService {
     //     this.updateTime()
     // }
 
-    updateTime(k) {
-        if (k < 10) {
-            return "0" + k;
-        }
-        else {
-            return k;
-        }
-    }
+    // updateTime(k) {
+    //     debugger
+    //     if (k < 10) {
+    //         return "0" + k;
+    //     }
+    //     else {
+    //         return k;
+    //     }
+    // }
     currentTime() {
         var date = new Date();
         var hour = date.getHours();
@@ -24,8 +34,8 @@ class ClockService {
         var midday = "AM";
         midday = (hour >= 12) ? "PM" : "AM";
         hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12) : hour);
-        hour = this.updateTime(hour);
-        min = this.updateTime(min);
+        hour = updateTime(hour);
+        min = updateTime(min);
         //sec = this.updateTime(sec);
         document.getElementById("clock").innerText = hour + " : " + min + midday;
         //document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday;

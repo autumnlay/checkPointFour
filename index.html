@@ -35,30 +35,30 @@
           <div class="col-12" id="quote">
             hey there
           </div>
-          <div class="col-12" id="todos" onclick="app.todosController.showTodos()">
+          <!-- <div class="col-12" id="todos" onclick="app.todosController.showTodos()">
             this would be the of todos
-          </div>
+          </div> -->
           <div class="col-12" id="weather">
             this would be the weather
           </div>
-          <div class="col-12 d-flex justify-content-end">
+          <!-- <div class="col-12 d-flex justify-content-end">
             <button class="bg-danger btn btn-rounded" onclick="app.todosController.showTodos()">my todos</button>
-          </div>
+          </div> -->
 
 
 
           <div class="bg-primary">
             <div>
               <h1> Todos:</h1>
-              <div class="col-12">`${this.showTodos()}`
+              <div class="col-12" id="todos">
               </div>
 
-              <form class="" onsubmit="app.todosController.createTodo('${this.id}')">
+              <form class="" onsubmit="app.todosController.createTodo()">
                 <div class="col-12">
                   <div class="form-group">
                     <label for="newTask"></label>
-                    <input type="text" class="my-2 form-control" name="todo" id="todos" aria-describedby="createNewTodo"
-                      placeholder="New Todo">
+                    <input type="text" class="my-2 form-control" name="description" id="todos"
+                      aria-describedby="createNewTodo" placeholder="New Todo">
                   </div>
 
                   <button class="btn btn-warning"> add todo</button>

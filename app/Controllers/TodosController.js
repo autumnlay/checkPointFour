@@ -2,6 +2,7 @@ import { ProxyState } from "../AppState.js";
 import { todosService } from "../Services/TodosService.js";
 
 function _drawTodos() {
+
     const todos = ProxyState.todos
     let template = ''
     todos.forEach(todo => template += todo.Template)
@@ -13,32 +14,32 @@ export class TodosController {
     constructor() {
         ProxyState.on('todos', _drawTodos)
         this.showTodos()
-        this.createTodo()
+        // this.createTodo()
     }
     async showTodos() {
         try {
             await todosService.getAllTodos()
-            document.getElementById('todos').innerHTML = ProxyState.todos
         } catch (error) {
             console.error('[ERROR]', error)
         }
     }
 
-    async createTodo(id) {
+    async createTodo() {
         try {
+            debugger
             window.event.preventDefault()
-            //const formElem = window.event.target
+            const formElem = window.event.target
             //debugger
             //await todosService.createTodo(todoData)
-            await todosService.createTodo(id)
+            //await todosService.createTodo(id)
             // /** @type {HTMLFormElement} */
-            // const todoData = {
-            //     description: formElem.description.value
-            // }
+            const todoData = {
+                description: formElem.description.value
+            }
+            await todosService.createTodo(todoData)
             // if (id !== 'undefined') {
             //     await todosService.editTodo(todoData, id)
             // } else {
-            //     await todosService.createTodo(todoData)
             // }
             formElem.reset()
         } catch (error) {

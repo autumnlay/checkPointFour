@@ -9,6 +9,7 @@ class TodosService {
         console.log(res.data)
         const todos = res.data.map(t => new Todo(t))
         ProxyState.todos = todos
+        console.log(ProxyState.todos)
     }
 
     async createTodo(todoData) {
