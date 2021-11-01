@@ -17,16 +17,16 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <!-- <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <span class="ms-2">checkPointFour</span>
       </a>
-    </nav>
+    </nav> -->
   </header>
   <main>
     <div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12" id="image" src="smiley.gif"> test 2
+          <div class="col-12" id="image">
           </div>
           <div class="col-12" id="clock">
             <!-- may want to embed the clock's js a lil better, into a service to form type of thing -->
@@ -36,14 +36,39 @@
             hey there
           </div>
           <div class="col-12" id="todos" onclick="app.todosController.showTodos()">
-            this would be the boxes
+            this would be the of todos
           </div>
           <div class="col-12" id="weather">
             this would be the weather
           </div>
-          <div class="col-12 d-flex justify-content-end">tasks
-            <button class="bg-danger btn btn-rounded">my tasks</button>
+          <div class="col-12 d-flex justify-content-end">
+            <button class="bg-danger btn btn-rounded" onclick="app.todosController.showTodos()">my todos</button>
           </div>
+
+
+
+          <div class="bg-primary">
+            <div>
+              <h1> Todos:</h1>
+              <div class="col-12">`${this.showTodos()}`
+              </div>
+
+              <form class="" onsubmit="app.todosController.createTodo('${this.id}')">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="newTask"></label>
+                    <input type="text" class="my-2 form-control" name="todo" id="todos" aria-describedby="createNewTodo"
+                      placeholder="New Todo">
+                  </div>
+
+                  <button class="btn btn-warning"> add todo</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </div>
@@ -59,7 +84,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
-  <script src="app/Clock.js"></script>
+  <!-- <script src="app/Clock.js"></script> -->
   <script src="app/main.js" type="module"></script>
 </body>
 

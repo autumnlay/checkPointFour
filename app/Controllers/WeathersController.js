@@ -21,4 +21,19 @@ export class WeathersController {
             console.error("[ERROR]", error)
         }
     }
+
+    toCelsius() {
+        weathersService.toCelsius()
+    }
+    toFahra() {
+        weathersService.toFahra()
+    }
+
+    // async changeWeatherF() {
+    //     try {
+
+    //     } catch (error) {
+    //         console.error("[Weather Error]", error)
+    //     }
+    // }
 }

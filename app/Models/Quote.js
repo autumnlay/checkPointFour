@@ -7,7 +7,7 @@ export class Quote {
     }
     get Template() {
         return `
-        <div class="p-3 reveal">
+        <div class="p-3 reveal text-light text-shadow"">
         <h3>${this.theQuote}</h3>
         <p class="hide "> ${this.author}</p>
         </div>

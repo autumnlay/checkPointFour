@@ -7,7 +7,13 @@ export class Weather {
     }
     get Template() {
         return `
-        <div> yeah, the weather </div>
+        <div class="text-light text-shadow">
+        <p>Current Temp: ${this.temp}</p>
+        <p>High: ${this.tempMax}</p>
+        <p>Low: ${this.tempMin}</p>
+        <button onclick="app.weatherController.toCelsius()" class="btn btn-secondary"> Change to Celsius</button>
+        <button onclick="app.weatherController.toFahra()" class="btn btn-secondary"> Change to Fahrenheit</button>
+        </div>
         `
     }
 }

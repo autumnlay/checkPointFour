@@ -16,6 +16,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
+p {
+  text-shadow: 2px 2px 5px rgb(24, 23, 23) 
+}
 /* body{
   background-image: url($imgURL);
 } */
