@@ -6,17 +6,12 @@ export class ClockController {
     constructor() {
         ProxyState.on('clock')
         //document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
-        this.updateTime()
         this.currentTime()
         this.setIntervalTime()
     }
 
     currentTime() {
         clockService.currentTime()
-    }
-
-    updateTime() {
-        clockService.updateTime()
     }
 
     setIntervalTime() {

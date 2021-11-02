@@ -28,12 +28,12 @@
         <div class="row">
           <div class="col-12" id="image">
           </div>
+          <div class="col-12" id="quote">
+            hey there
+          </div>
           <div class="col-12" id="clock">
             <!-- may want to embed the clock's js a lil better, into a service to form type of thing -->
             this should be the clock
-          </div>
-          <div class="col-12" id="quote">
-            hey there
           </div>
           <!-- <div class="col-12" id="todos" onclick="app.todosController.showTodos()">
             this would be the of todos
@@ -50,10 +50,11 @@
           <div class="bg-primary">
             <div>
               <h1> Todos:</h1>
+              <div id="checkBoxTotal"></div>
               <div class="col-12" id="todos">
               </div>
 
-              <form class="" onsubmit="app.todosController.createTodo()">
+              <form onsubmit="app.todosController.createTodo()">
                 <div class="col-12">
                   <div class="form-group">
                     <label for="newTask"></label>
@@ -61,7 +62,7 @@
                       aria-describedby="createNewTodo" placeholder="New Todo">
                   </div>
 
-                  <button class="btn btn-warning"> add todo</button>
+                  <button type="submit" class="btn btn-warning"> add todo</button>
                 </div>
               </form>
             </div>
@@ -84,7 +85,6 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
-  <!-- <script src="app/Clock.js"></script> -->
   <script src="app/main.js" type="module"></script>
 </body>
 

@@ -9,12 +9,21 @@ function _drawTodos() {
     document.getElementById('todos').innerHTML = template
 }
 
+// function _getCount() {
+//     const allChecks = ProxyState.todos.find(c => c.id == id)
+//     const completedTodos = ProxyState.todos.filter(c => c.completed == true)
+//     document.getElementById('checkBoxTotal').innerHTML = `${completedTodos.length} / ${ProxyState.todos.length}`
+//     //return `${completedTodos.length} / ${allChecks.length}`
+// }
 
 export class TodosController {
     constructor() {
         ProxyState.on('todos', _drawTodos)
         this.showTodos()
+        //ProxyState.on('checkBoxTotal', getCount())
+        this.getCount()
         // this.createTodo()
+        //this.checkBox()
     }
     async showTodos() {
         try {
@@ -26,7 +35,7 @@ export class TodosController {
 
     async createTodo() {
         try {
-            debugger
+            //debugger
             window.event.preventDefault()
             const formElem = window.event.target
             //debugger
@@ -56,6 +65,17 @@ export class TodosController {
     }
 
     async checkBox(id) {
-        await todosService.checkBox(id)
+        try {
+            await todosService.checkBox(id)
+        } catch (error) {
+            console.error("[check box ERROR", error)
+        }
+    }
+    async getCount(id) {
+        try {
+            await todosService.getCount(id)
+        } catch (error) {
+            console.error("[check box ERROR", error)
+        }
     }
 }

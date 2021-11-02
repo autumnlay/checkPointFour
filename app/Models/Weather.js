@@ -1,6 +1,7 @@
 export class Weather {
     constructor(data) {
-        this.temp = this.getFahra(data.temp)
+        this.temp = data.main.temp
+        //this.temp = this.getFahra(data.temp)
         this.tempMin = data.main.temp_min
         this.tempMax = data.main.temp_max
         this.location = data.name

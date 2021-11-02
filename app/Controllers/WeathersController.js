@@ -22,12 +22,12 @@ export class WeathersController {
         }
     }
 
-    toCelsius() {
-        weathersService.toCelsius()
-    }
-    toFahra() {
-        weathersService.toFahra()
-    }
+    // toCelsius() {
+    //     weathersService.toCelsius()
+    // }
+    // toFahra() {
+    //     weathersService.toFahra()
+    // }
 
     // async changeWeatherF() {
     //     try {

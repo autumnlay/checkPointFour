@@ -1,7 +1,6 @@
 import { ProxyState } from "../AppState.js";
 
 function updateTime(k) {
-    debugger
     if (k < 10) {
         return "0" + k;
     }
@@ -30,20 +29,20 @@ class ClockService {
         var date = new Date();
         var hour = date.getHours();
         var min = date.getMinutes();
-        //var sec = date.getSeconds();
+        var sec = date.getSeconds();
         var midday = "AM";
         midday = (hour >= 12) ? "PM" : "AM";
         hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12) : hour);
         hour = updateTime(hour);
         min = updateTime(min);
-        //sec = this.updateTime(sec);
-        document.getElementById("clock").innerText = hour + " : " + min + midday;
-        //document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday;
+        sec = updateTime(sec);
+        //document.getElementById("clock").innerText = hour + " : " + min + midday;
+        document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday;
         //var t = setTimeout(currentTime, 1000); /* setting timer */
     }
 
     setIntervalTime() {
-        setInterval(this.currentTime, 3000);
+        setInterval(this.currentTime, 1000);
     }
 
 

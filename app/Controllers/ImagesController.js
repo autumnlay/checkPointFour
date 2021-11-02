@@ -6,9 +6,9 @@ function _printImage() {
     // let template = ''
     // template = image.imgURL
     //document.getElementById('image').src = image.imgURL
-    document.body.style.backgroundColor = "green"
+    document.body.style.backgroundColor = "white"
     // FIXME the url isn't goin in right...
-    document.body.style.backgroundImage = `url('${image.imgURL}')`
+    document.body.style.backgroundImage = `url('${image.largeImgUrl}')`
     //document.body.style.backgroundImage = "url('template')"
 
 }
